@@ -15,7 +15,7 @@ public class Mountain {
         deaths = d;
     }
 
-    public int getHeight () {
+    public int getHeight() {
         return height;
     }
     public String getName () {
