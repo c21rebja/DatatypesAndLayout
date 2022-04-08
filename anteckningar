@@ -1,0 +1,49 @@
+skapa egen datatyp --> skapa en ny klass
+klasser ska ha stor bokstav, variabler ska ha små
+"medlemsvariabler" --> variabler skapade i en klass. ofta private
+
+Skapa en ny datatyp:
+
+class Berg {
+    private int height_m;
+    private string name;
+    private string location;
+
+    public Berg (int h, string n, string l) {
+        height_m = h;
+        name = n;
+        location = l;
+    }
+}
+
+Använda datatypen:
+(( New används när man skapar en ny instans (använder oss av den). ))
+
+Berg b = new Berg (306, "Kinnekulle", "Götene");
+
+Få ut informationen ur den nyskapta datatypen måste fler metoder skapas i själva datatypen.
+"Getters & Setters"
+
+Skapa en metod för varje medlemsvariabel.
+
+En getter (för namnet):
+public String getName() {
+    // get + variabelnamnet
+    return name;
+}
+
+b.getName(); // hämtar namnet ur berget b.
+
+En getter (för namnet):
+public void setName ( String n ) {
+    name = n; // name är variabeln som sattes högst upp i berg-datatypen.
+}
+
+Alla datatyper kan använda sig av "toString".
+"Hur skulle HELA datatypen se ut som en sträng?"
+(Get och set tar bara hand om ett värde åt gången.)
+
+public String toString () {
+    // kan välja innehållet själv, kanske bara vill få ut en variabel.
+    return "Namnet är: " + name + ", och platsen är " + location ".";
+}
